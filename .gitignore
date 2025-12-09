@@ -1,6 +1,0 @@
-*.class
-*.jar
-*.iml
-.vscode/
-.idea/
-target/
