@@ -1,9 +1,7 @@
-CREATE DATABASE studentdb;
+CREATE DATABASE IF NOT EXISTS studentdb;
 USE studentdb;
 
-CREATE TABLE students (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100),
-    age INT,
-    grade VARCHAR(10)
+CREATE TABLE IF NOT EXISTS students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
 );
