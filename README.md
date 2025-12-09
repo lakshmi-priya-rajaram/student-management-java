@@ -1,30 +1,25 @@
-# Student Management System (Java + MySQL)
+# Student-Management-Java
 
-A Java console-based CRUD application used to manage student records.  
-Uses JDBC to connect with MySQL.
+Simple Java console CRUD app using MySQL (JDBC).
 
-## Features
-- Add student
-- View students
-- Update student
-- Delete student
-- Error handling
-- Modular OOP logic
+## Files
+- StudentManagement.java
+- schema.sql
+- README.md
 
-## Tech Stack
-- Java
-- MySQL
-- JDBC
+## Setup
 
-## How to Run
-1. Install Java & MySQL
-2. Create database:
-   CREATE DATABASE studentdb;
-   CREATE TABLE students(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50));
-3. Run the Java file using any IDE (Eclipse/VS Code)
+### 1) Install prerequisites
+- Java JDK (11+ recommended)
+- MySQL server
+- MySQL Connector/J (JDBC driver) — [mysql-connector-java-x.x.x.jar]
 
-## What I Learned
-- JDBC connection
-- SQL CRUD
-- Java OOP
-
+### 2) Create DB
+Run the SQL in `schema.sql` (via MySQL Workbench / CLI):
+```sql
+CREATE DATABASE IF NOT EXISTS studentdb;
+USE studentdb;
+CREATE TABLE IF NOT EXISTS students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+);
